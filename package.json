@@ -1,6 +1,7 @@
 {
-  "name": "blk-design-system-react",
-  "version": "1.2.2",
+  "homepage": "https://huynguyen22994.github.io/HotelBooking.Dev",
+  "name": "hotelbookingdev",
+  "version": "1.0.0",
   "description": "React version of BLK Design System by Creative Tim",
   "main": "index.js",
   "author": "Creative Tim",
@@ -12,24 +13,9 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/blk-design-system-react/issues"
   },
-  "homepage": "https://demos.creative-tim.com/blk-design-system-react/#/",
   "keywords": [
     "react",
-    "reactjs",
-    "blk",
-    "blk-react",
-    "design",
-    "design-react",
-    "system",
-    "system-react",
-    "design-system",
-    "design-system-react",
-    "blk-design",
-    "blk-design-react",
-    "blk-system",
-    "blk-system-react",
-    "blk-design-system",
-    "blk-design-system-react"
+    "reactjs"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "5.16.5",
@@ -65,6 +51,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -94,5 +82,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

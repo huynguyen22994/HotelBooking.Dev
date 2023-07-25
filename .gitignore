@@ -1,5 +1,6 @@
 /node_modules
 /.github
+/build
 LICENSE.md
 ISSUE_TEMPLATE.md
 CHANGELOG.md
