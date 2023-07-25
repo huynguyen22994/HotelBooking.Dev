@@ -6,7 +6,7 @@ import {
   Col,
   } from 'reactstrap'
 import {useNavigate, createSearchParams} from 'react-router-dom'
-import { format } from 'date-fns';
+import { format, getTime } from 'date-fns';
 import classNames from 'classnames/bind';
 
 // core components
@@ -39,10 +39,22 @@ export default function HomePage() {
   }
 
   const handleViewDetail = (data) => {
-    console.log(data);
+    let params = {
+      hotel_id: data.hotel_id,
+      search_id: resultData.searchId,
+      departure_date: getTime(new Date(resultData.dateRange.endDate)),
+      arrival_date: getTime(new Date(resultData.dateRange.startDate)),
+      rec_guest_qty: resultData.persons,
+      rec_room_qty: data['urgency_room_c'],
+      dest_ids: resultData.location['dest_id'],
+      recommend_for: '3',
+      languagecode: 'vi',
+      currency_code: 'USD',
+      units: 'imperial'
+    }
     navigate({
       pathname: '/hotel',
-      search: `?${createSearchParams({ hotelid: data.hotel_id })}`,
+      search: `?${createSearchParams(params)}`,
     });
   }
 

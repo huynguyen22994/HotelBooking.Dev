@@ -1,4 +1,5 @@
 import HomePage from '../pages/Home/Home'
+import HotelDetail from '../pages/HotelDetail/HotelDetail'
 
 import LandingPage from "../views/examples/LandingPage.js";
 import RegisterPage from "../views/examples/RegisterPage.js";
@@ -12,7 +13,7 @@ const PublicRoutes = [
     },
     {
         path: '/hotel',
-        component: LandingPage
+        component: HotelDetail
     },
     {
         path: '/components',

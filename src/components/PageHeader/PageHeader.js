@@ -134,7 +134,8 @@ export default function PageHeader({ searchCallback }) {
           location: scopeData.current.selectedLocation,
           persons: scopeData.current.persons,
           dateRange: scopeData.current.dateRange,
-          hotelResults: data.result
+          hotelResults: data.result,
+          searchId: data.search_id
         })
       }
       setIsSeraching(false);

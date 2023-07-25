@@ -14,14 +14,10 @@ import {
     Col,
     Badge, CardFooter, Button
 } from "reactstrap";
+import { formatCurrency } from '../../services/util'
 
 export default function CardSection({ data, handleViewDetail }) {
     const [iconTabs, setIconsTabs] = React.useState(1);
-
-    
-    const formatCurrency = (number) => {
-        return (number).toFixed(1).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
-    }
 
     return (
         <Card>
