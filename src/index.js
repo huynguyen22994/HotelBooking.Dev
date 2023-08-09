@@ -28,8 +28,13 @@ import 'react-date-range/dist/theme/default.css';
 import { StoreProvider } from './store';
 import { PubicRoutes } from './routes'
 import { DefaultLayout } from './layout'
+import storeRedux  from "storeRedux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+storeRedux.subscribe(() => {
+  document.title = storeRedux.getState().titlePage;
+})
 
 root.render(
     <BrowserRouter>

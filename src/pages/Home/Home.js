@@ -8,6 +8,7 @@ import {
 import {useNavigate, createSearchParams} from 'react-router-dom'
 import { format, getTime } from 'date-fns';
 import classNames from 'classnames/bind';
+import storeRedux, { CHANGETITLE } from "storeRedux";
 
 // core components
 
@@ -27,6 +28,8 @@ export default function HomePage() {
 
   React.useEffect(() => {
     document.body.classList.toggle("index-page");
+    let action = { type: CHANGETITLE, titlePage: "Trang chủ" };
+    storeRedux.dispatch(action);
     // Specify how to clean up after this effect:
     return function cleanup() {
       document.body.classList.toggle("index-page");

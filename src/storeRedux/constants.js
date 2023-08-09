@@ -1,0 +1,3 @@
+const CHANGETITLE = "CHANGETITLE"
+
+export { CHANGETITLE }

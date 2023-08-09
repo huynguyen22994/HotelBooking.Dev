@@ -18,6 +18,7 @@ import { useSearchParams } from 'react-router-dom'
 import { toDate, format } from 'date-fns';
 import classNames from 'classnames';
 import ReactLoading from 'react-loading';
+import storeRedux, { CHANGETITLE } from "storeRedux";
 
 import styles from './HotelDetail.module.scss'
 import { fetchData } from '../../services/index'
@@ -33,6 +34,8 @@ export default function RegisterPage() {
   const [searchParams] = useSearchParams();
 
   React.useEffect(() => {
+    let action = { type: CHANGETITLE, titlePage: "Xem khách sạn" };
+    storeRedux.dispatch(action);
     const params = {
         hotel_id: searchParams.get('hotel_id'),
         search_id: searchParams.get('search_id'),
